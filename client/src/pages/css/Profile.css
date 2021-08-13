@@ -1,0 +1,109 @@
+.Profile {
+	padding-top: 40px;
+	margin: 0 3px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* apply to all buttons on profile page */
+.Profile button:focus,
+.Profile button:active,
+.Profile button:hover {
+	outline: 0;
+	transform: scale(0.9);
+}
+
+.Profile label {
+	font-weight: 500;
+	font-size: medium;
+	display: inline-block;
+	margin-right: 1rem;
+	color: grey;
+}
+
+.Profile input {
+	display: inline-block;
+	padding: 4px 6px;
+	width: 175px;
+	border: none;
+	background-color: aliceblue;
+}
+
+.Profile #email {
+	display: inline-block;
+	margin-left: 2.2rem;
+}
+
+/* User friend cards */
+
+.Profile-user-friends {
+	margin: 3rem auto;
+	padding: 0 2rem;
+}
+
+.ProfUserFrie-cont {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 0.8rem;
+	padding: 0.5rem 1.2rem;
+	background-color: rgb(212, 196, 252);
+}
+
+.ProfUserFrie-img-wrapper {
+	margin-right: 1.2rem;
+}
+
+.ProfUserFrie-img {
+	width: 75px;
+	height: 75px;
+	object-fit: cover;
+	border-radius: 50%;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ProfUserFrie-info-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ProfUserFrie-info p {
+	margin: 0;
+}
+
+.ProfUserFrie-info span {
+	font-weight: 600;
+	font-size: 0.9rem;
+}
+
+.ProfUserFrie-btn-group {
+	display: inline-block;
+	margin: 0.2rem 0 0.2rem 1rem;
+	padding: 0.3rem 0.5rem;
+	border-radius: 3px;
+	background-color: rgb(130, 252, 130);
+	color: #555;
+	border: none;
+}
+
+.ProfUserFrie-btn-unfriend {
+	background-color: orange;
+	color: white;
+}
+
+/* media queries  */
+@media only screen and (max-width: 500px) {
+	.Profile label {
+		display: block;
+		font-size: 0.85rem;
+		font-weight: 400;
+		margin: 8px 0 0;
+	}
+
+	.Profile #email {
+		margin-left: 0;
+	}
+}

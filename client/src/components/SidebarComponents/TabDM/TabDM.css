@@ -1,0 +1,71 @@
+.TabDM-view-chat-btn {
+	border: none;
+	border-radius: 25px;
+}
+
+.TabDM-view-chat-btn:hover,
+.TabDM-view-chat-btn:focus {
+	outline: 0;
+	transform: scale(1.1);
+	background-color: #84f;
+	color: white;
+}
+
+.Sidenav-menu-dm {
+	background-color: rgb(233, 252, 252);
+	width: 325px;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	/* top: 80; */
+	top: 0;
+	left: -100%;
+	transition: 850ms;
+	z-index: 10;
+}
+
+.Sidenav-menu-dm.active {
+	left: 0;
+	transition: 350ms;
+}
+
+.Sidenav-menu-items-dm {
+	width: 100%;
+}
+
+.Sidenav-toggle-dm {
+	background-color: rgb(230, 227, 227);
+	transition: 350ms;
+	width: 430px;
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 1rem;
+}
+
+.Sidenav-header-img {
+	display: inline-block;
+	background-color: gold;
+	border-radius: 50%;
+	margin-left: 12px;
+	margin-right: 8px;
+}
+
+.Sidenav-header-close-btn {
+	border: none;
+	background-color: transparent;
+}
+
+
+@media only screen and (max-width: 800px) {
+	.Sidenav-toggle-dm {
+		width: 325px;
+		transition: 350ms;
+	}
+
+	.TabRoomChats-chat-input {
+		width: 215px;
+	}
+}

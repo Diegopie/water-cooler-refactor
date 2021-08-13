@@ -1,0 +1,27 @@
+.SearchButton-btn {
+	width: 150px;
+	border: none;
+	padding: 8px;
+	border-radius: 5px;
+	color: #333;
+	font-size: small;
+}
+
+.SearchButton-btn:hover,
+.SearchButton-btn:focus,
+.SearchButton-btn:active {
+	transform: scale(0.9);
+	background-color: aqua;
+}
+
+.SearchButton-send {
+	background-color: greenyellow;
+}
+
+.SearchButton-pend {
+	background-color: gold;
+}
+
+.SearchButton-msg {
+	background-color: yellow;
+}

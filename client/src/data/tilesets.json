@@ -1,0 +1,13 @@
+{
+    "choose-a-tileset": {
+        "variants": [
+            "cafe",
+            "casino"
+        ],
+        "size": {
+            "height": 850,
+            "width": 1050
+
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.Sidenav-menu {
+	background-color: rgba(241, 245, 248);
+	width: 430px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	top: 80;
+	top: 0;
+	left: -100%;
+	transition: 850ms;
+	z-index: 1000;
+}
+
+.Sidenav-menu.active {
+	left: 0;
+	transition: 350ms;
+}
+
+.Sidenav-menu-items {
+	width: 100%;
+}
+
+.Sidenav-toggle {
+	background-color: rgba(68, 66, 66, 0.3);
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-right: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+	.Sidenav-menu {
+		width: 325px;
+	}
+}

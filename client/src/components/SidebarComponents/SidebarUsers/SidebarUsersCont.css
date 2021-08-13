@@ -1,0 +1,35 @@
+
+/* invite accept btn  */
+.SbUserCont-btn.accept {
+	background-color: rgb(182, 252, 77);
+}
+
+/* invite decline btn  */
+.SbUserCont-btn.decline {
+	background-color: lightgoldenrodyellow;
+}
+
+/* shared style for all btns  */
+.SbUserCont-btn {
+	border: none;
+	border-radius: 25px;
+}
+
+.SbUserCont-btn:hover,
+.SbUserCont-btn:focus {
+	outline: 0;
+	transform: scale(1.1);
+	background-color: #84f;
+	color: white;
+}
+
+.SbUserCont-Text {
+	width: 205px;
+	max-width: 205px;
+}
+
+@media only screen and (max-width: 800px) {
+	.SbUserCont-Text {
+		width: 100px;
+	}
+}

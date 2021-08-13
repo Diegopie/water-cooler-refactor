@@ -1,0 +1,81 @@
+.TabRoomChats-chat-wrapper {
+	position: relative;
+	height: 75vh;
+	background-color: rgb(241, 245, 248);
+	overflow-y: auto;
+}
+
+.TabRoomChats-chat-body {
+	padding: 0 5px;
+}
+
+.TabRoomChats-chat-username {
+	text-transform: capitalize;
+	overflow-x: hidden;
+}
+
+.TabRoomChats-chat-msg {
+	max-width: 80%;
+	overflow-wrap: break-word;
+	display: inline-block;
+	background-color: rgb(247, 224, 228);
+	border-radius: 25px;
+	padding: 3px;
+}
+
+.TabRoomChats-chat-you {
+	text-align: end;
+}
+
+.TabRoomChats-chat-msg-you {
+	max-width: 80%;
+	overflow-wrap: break-word;
+	display: inline-block;
+	background-color: rgb(164, 250, 157);
+	border-radius: 25px;
+	padding: 3px;
+
+}
+
+.TabRoomChats-chat-footer {
+	background-color: rgb(230, 227, 227);
+	width: 430px;
+	transition: 350ms;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	margin-bottom: 60px;
+}
+
+.TabRoomChats-chat-input {
+	width: 300px;
+	padding: 5px 10px;
+	border: 0;
+	border-radius: 25px;
+	display: inline-block;
+	margin: 0 10px;
+}
+.TabRoomChats-chat-input:focus {
+	outline: 0;
+}
+
+.TabRoomChats-chat-btn {
+	border: 0;
+	background-color: transparent;
+}
+
+@media only screen and (max-width: 800px) {
+	.TabRoomChats-chat-footer {
+		width: 325px;
+		transition: 350ms;
+	}
+
+	.TabRoomChats-chat-input {
+		width: 215px;
+		transition: 350ms;
+	}
+
+	.TabRoomChats-chat-wrapper {
+		height: 62vh;
+	}
+}

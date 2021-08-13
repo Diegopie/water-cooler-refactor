@@ -1,0 +1,86 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "bootstrap": "^4.5.3",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^17.0.1",
+    "react-dropdown": "^1.9.0",
+    "react-loader-spinner": "^3.1.14",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "react-toastify": "^6.2.0",
+    "socket.io-client": "^3.0.4",
+    "use-sound": "^2.0.1",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "array-callback-return": "warn",
+      "curly": "warn",
+      "dot-notation": "warn",
+      "eqeqeq": "warn",
+      "implicit-arrow-linebreak": [
+        "warn",
+        "beside"
+      ],
+      "indent": [
+        "warn",
+        4,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "no-duplicate-case": "warn",
+      "no-else-return": "warn",
+      "no-empty": "warn",
+      "no-empty-function": "warn",
+      "no-extra-semi": "warn",
+      "no-func-assign": "warn",
+      "no-irregular-whitespace": "warn",
+      "no-multi-spaces": "warn",
+      "no-unreachable": "warn",
+      "no-unused-vars": "warn",
+      "no-var": "warn",
+      "prefer-arrow-callback": "warn",
+      "quotes": [
+        "warn",
+        "single"
+      ],
+      "semi": [
+        "warn",
+        "always"
+      ],
+      "vars-on-top": "warn",
+      "yoda": "warn"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:5000"
+}

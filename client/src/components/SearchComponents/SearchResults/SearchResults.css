@@ -1,0 +1,12 @@
+.SearchResults-cont {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 6px;
+}
+
+.SearchResults-img {
+	height: 50px;
+	width: 50px;
+	border-radius: 5px;
+}
