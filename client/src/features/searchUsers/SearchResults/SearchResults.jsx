@@ -4,8 +4,6 @@ import SearchContext from '../../../context/SearchContext';
 import './SearchResults.css';
 
 const SearchResults = () => { 
-
-    // move the context wrapper to where SearchResults is called
   
     return (
         <SearchContext.Consumer>
@@ -27,7 +25,7 @@ const SearchResults = () => {
                             </div>
                             {/* * Send Props to SearchButton To Conditionally Render Buttons */}
                             <SearchButton
-                                searchDB={context.searchDB}
+                                fetchSearch={context.fetchSearch}
                                 pending={returnedUser.pending}  
                                 blocked={returnedUser.blocked}
                                 friends={returnedUser.friends}
