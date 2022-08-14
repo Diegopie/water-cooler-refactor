@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { BsSearch } from 'react-icons/bs';
 import { Container, Modal } from 'react-bootstrap';
 import { toast } from 'react-toastify';
-import SearchResults from '../../SearchComponents/SearchResults';
-import SearchContext from '../../../utils/SearchContext';
+import SearchResults from '../SearchResults';
+import SearchContext from '../../../context/SearchContext';
 import './SearchModal.css';
 
 function SearchModal (props) {
