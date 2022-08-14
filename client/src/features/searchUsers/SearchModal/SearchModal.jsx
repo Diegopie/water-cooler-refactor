@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SearchResults from '../SearchResults';
 import SearchContext from '../../../context/SearchContext';
-import { newSearchDB } from '../server.search.api';
+import { searchDB } from '../server.search.api';
 import { BsSearch } from 'react-icons/bs';
 import { Container, Modal } from 'react-bootstrap';
 import { toast } from 'react-toastify';
@@ -15,8 +15,7 @@ function SearchModal(props) {
 
     // * Connect to DB with User's Search
     const fetchSearch = () => {
-        setSearchResults([]);
-        newSearchDB(searchQuery)
+        searchDB(searchQuery)
             .then((data) => {
                 if (!data) {
                     toast.warning('No match 😮', {

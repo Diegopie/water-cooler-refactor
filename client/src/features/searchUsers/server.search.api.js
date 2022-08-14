@@ -1,4 +1,4 @@
-const newSearchDB = async (searchQuery) => {
+const searchDB = async (searchQuery) => {
     try{
         const response = await fetch('/api/user/search', {
             headers: { 'Content-Type': 'application/json' },
@@ -18,4 +18,22 @@ const newSearchDB = async (searchQuery) => {
     }
 };
 
-export {newSearchDB};
+const sendFriendRequest = async (id, userId) => {
+    try {
+        const request = await fetch('/api/friends/request', {
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ friend: id, user: userId }),
+            method: 'PUT'
+        });
+        const status = await request.json();
+       
+        if (!status.success) {
+            console.log('server err');
+        }
+        
+    } catch (err) {
+        console.log({ err });
+    }
+};
+
+export {searchDB, sendFriendRequest};

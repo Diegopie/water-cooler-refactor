@@ -1,24 +1,12 @@
 import React from 'react';
+import { sendFriendRequest } from '../server.search.api';
 import './SearchButton.css';
 
 const SearchButton = (props) => {
     // * Send IDs of user and invited to server to make friend req
-    const friendRequest = async (id) => {
-        try {
-            const request = await fetch('/api/friends/request', {
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ friend: id, user: props.userId }),
-                method: 'PUT'
-            });
-            const status = await request.json();
-           
-            if (!status.success) {
-                console.log('server err');
-            }
-            
-        } catch (err) {
-            console.log({ err });
-        }
+    const fetchSendFriendRequest = (id) => {
+        sendFriendRequest(id, props.userId)
+            .then();
     };
     // * Default Button To Render
     // change to dispatch and reducer for props
@@ -28,8 +16,8 @@ const SearchButton = (props) => {
             className='SearchButton-send SearchButton-btn'
             onClick={async e => {
                 e.preventDefault();
-                await friendRequest(props.friendId);
-                props.searchDB();
+                await fetchSendFriendRequest(props.friendId);
+                props.fetchSearch();
             }}
         >Send Friend Request</button>;
     
