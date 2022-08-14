@@ -9,7 +9,7 @@ import RoomGUI from './pages/RoomGUI';
 import SocialSpace from './pages/SocialSpace';
 import Space from './pages/Space';
 // Import Components
-import Footer from './components/layouts/Footer';
+import Footer from './layouts/Footer';
 import Loading from './components/Loading';
 import LoginModal from './components/Modals/LoginModal';
 import SideNav from './components/NavbarComponents/SideNav';
