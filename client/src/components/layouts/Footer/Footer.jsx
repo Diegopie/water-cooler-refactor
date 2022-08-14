@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BsSearch, BsFillPersonFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { Navbar } from 'react-bootstrap';
-import SearchModal from '../Modals/SearchModal';
+import SearchModal from '../../Modals/SearchModal';
 import './Footer.css';
 
 

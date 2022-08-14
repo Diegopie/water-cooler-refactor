@@ -1,23 +1,28 @@
+// Import Dependencies
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
+// Import Pages
 import Homepage from './pages/Homepage';
 import Landing from './pages/Landing';
 import Profile from './pages/Profile';
 import RoomGUI from './pages/RoomGUI';
 import SocialSpace from './pages/SocialSpace';
 import Space from './pages/Space';
-import Footer from './components/Footer';
+// Import Components
+import Footer from './components/layouts/Footer';
 import Loading from './components/Loading';
 import LoginModal from './components/Modals/LoginModal';
 import SideNav from './components/NavbarComponents/SideNav';
 import Slider from './components/SidebarComponents/Slider';
-import { Container } from 'react-bootstrap';
-import { ToastContainer, Zoom } from 'react-toastify';
+// Import Utils/Data
 import { GUIProvider } from './utils/GUIProvider';
 import { ChatProvider } from './utils/ChatProvider';
 import { SocketProvider } from './utils/SocketProvider';
 import { useGlobalContext } from './utils/GlobalContext';
+// Import CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'react-bootstrap';
+import { ToastContainer, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
