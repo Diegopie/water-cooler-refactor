@@ -5,8 +5,6 @@ async function db() {
         await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/waterCooler_db', {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            useFindAndModify: false,
-            useCreateIndex: true
         });
         console.log('successfully connected to db');
     } catch (error) {
