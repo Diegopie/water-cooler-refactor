@@ -2,9 +2,12 @@ import React from 'react';
 import SearchButton from '../SearchButton';
 import SearchContext from '../../../context/SearchContext';
 import './SearchResults.css';
+import { useGlobalContext } from '../../../utils/GlobalContext';
 
 const SearchResults = () => { 
   
+    const [{USER}, ] = useGlobalContext();
+
     return (
         <SearchContext.Consumer>
             {(context) => {
@@ -30,7 +33,7 @@ const SearchResults = () => {
                                 blocked={returnedUser.blocked}
                                 friends={returnedUser.friends}
                                 friendId={returnedUser.friendId}
-                                userId={context.userID} 
+                                userId={USER._id} 
                             />
                         </article>
                     ))

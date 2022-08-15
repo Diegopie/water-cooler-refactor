@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import SearchResults from '../SearchResults';
 import SearchContext from '../../../context/SearchContext';
 import { searchDB } from '../server.search.api';
@@ -11,7 +11,6 @@ function SearchModal(props) {
     // * States
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState([]);
-    const [userID, setUserID] = useState([]);
 
     // * Connect to DB with User's Search
     const fetchSearch = () => {
@@ -28,19 +27,8 @@ function SearchModal(props) {
         
     };
     
-    // * Listen to Page Load To Get User ID from Local Storage
-    useEffect(() => {
-        if (localStorage.getItem('USER') !== null) {
-            const { _id } = JSON.parse(localStorage.getItem('USER'));
-            setUserID(_id);
-        }
-    }, []);
-
-
-    // add contexts to where the component is referenced
-
     return (
-        <SearchContext.Provider value={{ fetchSearch, searchResults, userID }}>
+        <SearchContext.Provider value={{ fetchSearch, searchResults }}>
             <Modal {...props} backdrop='static' keyboard={false} centered>
                 <Modal.Header closeButton>
                     <Modal.Title />
