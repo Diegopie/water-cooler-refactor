@@ -4,27 +4,27 @@ const db = require('../models');
 const authRequired = require('../middlewares/authRequired');
 
 // api/user/signup
-router.post('/signup', async ({body}, res) => {
+router.post('/signup', async ({ body }, res) => {
 
     try {
- 
+
         const { email, password, username, firstName, lastName, imageSrc } = body;
 
-        if (!email || !password || !username ||!firstName || !lastName || !imageSrc) {
-      
+        if (!email || !password || !username || !firstName || !lastName || !imageSrc) {
+
             return res.status(422).json({ error: 'Please fill all the fields' });
         }
-  
+
         const savedUser = await db.User.findOne({ email: email });
 
         if (savedUser) {
             return res.status(422).json({ error: 'user already exists with that email' });
-        }  
+        }
         const user = new db.User(body);
         await user.save();
-        
+
         res.json({ success: true, message: ' user saved in db successfully' });
-    
+
     } catch (err) {
         console.error(err);
         res.status(500);
@@ -33,26 +33,26 @@ router.post('/signup', async ({body}, res) => {
 
 
 // api/user/login
-router.post('/login', passport.authenticate('local', {failureRedirect: '/'}), async (req, res) => { 
-    try{
+router.post('/login', passport.authenticate('local', { failureRedirect: '/' }), async (req, res) => {
+    try {
         if (!req.user) {
             const error = new Error('An Error occurred');
             return error;
         }
-        return res.status(200).json({success: true, user: req.user });
+        return res.status(200).json({ success: true, user: req.user });
     } catch (err) {
         console.error(err);
         res.status(500);
     }
-    
+
 });
 
 
 // api/user/profile and profile update
 router.put('/profile', authRequired, async ({ body }, res) => {
-    try{
+    try {
         //update db and return updated obj
-        const savedUser = await db.User.findByIdAndUpdate( body.user._id, body.user, { new: true });
+        const savedUser = await db.User.findByIdAndUpdate(body.user._id, body.user, { new: true });
         //return error if no user found  
         if (!savedUser) {
             return res.status(422).json({ error: 'Could not find this user' });
@@ -70,8 +70,12 @@ router.put('/profile', authRequired, async ({ body }, res) => {
 router.get('/logout', (req, res) => {
     if (req.session) {
         req.session.destroy();
-        req.logout();
-        res.status(200).json({success: true, message: 'logged out' });
+        req.logout((err) => {
+            if (err) { return (err); }
+            res.redirect('/');
+        });
+        res.clearCookie('connect.sid', {path: '/'});
+        res.status(200).json({ success: true, message: 'logged out' });
     }
     else {
         const err = new Error('You are not logged in!');
