@@ -87,7 +87,7 @@ router.post('/arrays', async ({ body }, res) => {
             });
 
             // ** Send Filtered Response to Client
-            res.json({ success: true, retUsers: response });
+            res.json({ success: true, retUsers: response, returnedUsers: response });
         };
 
         const processRooms = async (ids) => {
