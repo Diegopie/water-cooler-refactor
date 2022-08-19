@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useGlobalContext } from '../utils/GlobalContext';
+import { useGlobalContext } from '../context/GlobalContext';
 
 const SocialSpace = () => {
     const [state, dispatch] = useGlobalContext();

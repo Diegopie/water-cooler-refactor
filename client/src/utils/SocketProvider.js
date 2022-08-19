@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { useGlobalContext } from '../utils/GlobalContext';
+import { useGlobalContext } from '../context/GlobalContext';
 import io from 'socket.io-client';
 
 const SocketContext = createContext();

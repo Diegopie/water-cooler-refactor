@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import CreateRoom from '../components/HomepageComponents/CreateRoom';
 import FriendsRoom from '../components/HomepageComponents/FriendsRoom';
 import RoomCarousel from '../components/HomepageComponents/RoomCarousel';
-import { useGlobalContext } from '../utils/GlobalContext';
+import { useGlobalContext } from '../context/GlobalContext';
 
 // * Homepage Requests User Friend Information to Render Open Rooms 
 // !* Note: A similar request is being made in TabNav, Future Development Will Make This Data Request Once 

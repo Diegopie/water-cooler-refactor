@@ -5,7 +5,7 @@ import { IconContext } from 'react-icons';
 import { IoIosPeople } from 'react-icons/io';
 import { toast } from 'react-toastify';
 import { useHistory } from 'react-router-dom';
-import { useGlobalContext } from '../../../utils/GlobalContext';
+import { useGlobalContext } from '../../../context/GlobalContext';
 import dummyFriendRooms from '../../../data/friendsRoom';
 import './FriendsRoom.css';
 

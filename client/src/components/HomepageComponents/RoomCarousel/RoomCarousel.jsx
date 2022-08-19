@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import roomStyles from '../../../data/productionRoomStyles';
 import {Carousel, Col} from 'react-bootstrap';
 import { toast } from 'react-toastify';
-import { useGlobalContext } from '../../../utils/GlobalContext';
+import { useGlobalContext } from '../../../context/GlobalContext';
 import './RoomCarousel.css';
 
 function RoomCarousel() {

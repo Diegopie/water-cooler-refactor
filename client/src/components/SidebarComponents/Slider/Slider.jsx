@@ -2,7 +2,7 @@ import React from 'react';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import Tabnav from '../Tabnav';
-import {useGlobalContext} from '../../../utils/GlobalContext.js';
+import {useGlobalContext} from '../../../context/GlobalContext.js';
 import './Slider.css';
 
 function Slider() {

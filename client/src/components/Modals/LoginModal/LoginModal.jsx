@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import { useHistory } from 'react-router-dom';
-import { useGlobalContext } from '../../../utils/GlobalContext';
+import { useGlobalContext } from '../../../context/GlobalContext';
 import './LoginModal.css';
 
 

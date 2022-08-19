@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import { useHistory } from 'react-router-dom';
 import SidebarUsersCont from '../SidebarUsers';
 import TabMembersProfileModal from '../../Modals/TabMembersProfileModal';
-import { useGlobalContext } from '../../../utils/GlobalContext';
+import { useGlobalContext } from '../../../context/GlobalContext';
 import dummyRoomMembers from '../../../data/friends';
 import dummySocialSpaces from '../../../data/socialSpaces';
 import dummySpaceInvites from '../../../data/friendsRoom';

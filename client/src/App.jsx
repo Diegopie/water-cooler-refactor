@@ -18,7 +18,7 @@ import Slider from './components/SidebarComponents/Slider';
 import { GUIProvider } from './utils/GUIProvider';
 import { ChatProvider } from './utils/ChatProvider';
 import { SocketProvider } from './utils/SocketProvider';
-import { useGlobalContext } from './utils/GlobalContext';
+import { useGlobalContext } from './context/GlobalContext';
 // Import CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';

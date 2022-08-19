@@ -3,7 +3,7 @@ import { CgMenu } from 'react-icons/cg';
 import { IconContext } from 'react-icons';
 import { Link, useHistory } from 'react-router-dom';
 import { Navbar } from 'react-bootstrap';
-import { useGlobalContext } from '../../../utils/GlobalContext';
+import { useGlobalContext } from '../../../context/GlobalContext';
 import './SideNav.css';
 
 function SideNav() {

@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { useGlobalContext } from '../utils/GlobalContext';
+import { useGlobalContext } from '../context/GlobalContext';
 import { useSocket } from './SocketProvider';
 
 const GUIContext = createContext();

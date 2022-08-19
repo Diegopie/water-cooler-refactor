@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Map from '../Map';
-import { useGlobalContext } from '../../../utils/GlobalContext';
+import { useGlobalContext } from '../../../context/GlobalContext';
 
 //For the map responsiveness 
 function debounce(fn, ms) {

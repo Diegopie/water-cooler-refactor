@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button, Col, Row } from 'react-bootstrap';
 import { toast } from 'react-toastify';
-import { useGlobalContext } from '../../../utils/GlobalContext.js';
+import { useGlobalContext } from '../../../context/GlobalContext.js';
 import dummyFriendRooms from '../../../data/friends';
 import './CreateRoom.css';
 

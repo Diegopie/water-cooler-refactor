@@ -2,7 +2,7 @@ import React from 'react';
 import SearchButton from '../SearchButton';
 import SearchContext from '../../../context/SearchContext';
 import './SearchResults.css';
-import { useGlobalContext } from '../../../utils/GlobalContext';
+import { useGlobalContext } from '../../../context/GlobalContext';
 
 const SearchResults = () => { 
   
