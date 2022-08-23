@@ -32,7 +32,7 @@ export function ChatProvider({ children }) {
                 );
                 const json = await response.json();
                 setRoomChat(json.data);
-                console.log(chatReceived);
+                // console.log(chatReceived);
             } catch (err) {
                 console.log({ err });
             }
