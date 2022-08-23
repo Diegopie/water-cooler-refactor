@@ -14,6 +14,6 @@ const getFriendsData = async (_id, arr) => {
     } catch (err) {
         console.log(err);
     }
-}
+};
 
 export { getFriendsData };

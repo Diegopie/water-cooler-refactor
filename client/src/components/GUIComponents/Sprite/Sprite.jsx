@@ -19,7 +19,7 @@ function Sprite({position, message, step = 0, dir = 0 }) {
 
     // ** Variables To Determine It TabMembers and Tab Chat Should Render and Determines what the publicRoomId is
     const path = window.location.pathname;
-    const roomCheck = path.includes('room');
+    // const roomCheck = path.includes('room');
     let roomID = path.substring(7);
     // If Path is Longer than 70, We are in a Social Space and Need to Adjust the substring
     // !* There ought to be a better way of doing this 😅
@@ -48,9 +48,9 @@ function Sprite({position, message, step = 0, dir = 0 }) {
         setTarget(event.target);
     };
 
-     // * Send Data To Create a Social Space and Route User To that Space
-     const createSocialSpace = async () => {
-        console.log("hit");
+    // * Send Data To Create a Social Space and Route User To that Space
+    const createSocialSpace = async () => {
+        console.log('hit');
         const pubSpaceId = uuidv4();
         const request = await fetch('/api/socialspace/create', {
             headers: { 'Content-Type': 'application/json' },
