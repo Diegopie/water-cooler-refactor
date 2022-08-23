@@ -1,45 +1,48 @@
-import { createContext, useContext, useReducer, useState } from 'react';
+import { createContext, useContext, useReducer } from 'react';
 import { getFriendsData } from '../services/server.friends.api';
-import { useGlobalContext } from './GlobalContext';
-
 export const FriendsContext = createContext();
 
-const [{ USER },] = useGlobalContext;
-const _id = USER._id;
 
-
-
+const _id = JSON.parse(localStorage.getItem('USER'));
 
 
 const defaultState = {
-    inpending: () => {
-        getFriendsData(_id, )
-            .then((data) => {
-                if (!data) { return []; }
-                return data;
-            });
-    },
-    offFriends: () => {
-        getFriendsData(_id, )
-            .then((data) => {
-                if (!data) { return []; }
-                return data;
-            });
-    },
-    allFriends: () => {
-        getFriendsData(_id, )
-            .then((data) => {
-                if (!data) { return []; }
-                return data;
-            });
-    },
-    inpendingRooms: () => {
-        getFriendsData(_id, )
-            .then((data) => {
-                if (!data) { return []; }
-                return data;
-            });
-    },
+    allFriendsTwo: getFriendsData(_id, 'friends')
+        .then((data) => {
+            if (!data) { return []; }
+            console.log(data);
+            return data;
+        })
+
+    // ** Set this based off 
+    // offFriends: () => {
+    //     getFriendsData(_id, )
+    //         .then((data) => {
+    //             if (!data) { return []; }
+    //             return data;
+    //         });
+    // },
+    // inpending: () => {
+    //     getFriendsData(_id, 'inpending')
+    //         .then((data) => {
+    //             if (!data) { return []; }
+    //             return data;
+    //         });
+    // },
+    // inpendingRooms: () => {
+    //     getFriendsData(_id, 'inpendingRooms')
+    //         .then((data) => {
+    //             if (!data) { return []; }
+    //             return data;
+    //         });
+    // },
+    // inpendingSpaces: () => {
+    //     getFriendsData(_id, 'inpendingSpaces')
+    //         .then((data) => {
+    //             if (!data) { return []; }
+    //             return data;
+    //         });
+    // },
 };
 
 const reducer = (state, action) => {

@@ -4,6 +4,7 @@ import CreateRoom from '../components/HomepageComponents/CreateRoom';
 import FriendsRoom from '../components/HomepageComponents/FriendsRoom';
 import RoomCarousel from '../components/HomepageComponents/RoomCarousel';
 import { useGlobalContext } from '../context/GlobalContext';
+import { useFriendsContext } from '../context/FriendsRoomsContext';
 
 // * Homepage Requests User Friend Information to Render Open Rooms 
 // !* Note: A similar request is being made in TabNav, Future Development Will Make This Data Request Once 
@@ -13,12 +14,19 @@ const Homepage = () => {
     const [{ USER },] = useGlobalContext();
     const _id = USER._id;
 
+    const [{ allFriendsTwo }, ] = useFriendsContext();
+
+    console.log(allFriendsTwo);
+    // Now that this is working, render homepage with FriendsRoom context
+
     // * Store Data in State For Use in CreateRoom and FriendRoom Components
     const [allFriends, setAllFriends] = useState([]);
     const [roomsData, setRoomsData] = useState([]);
     const [roomHost, setRoomHost] = useState([]);
 
     
+    
+    // !!! Old Code for ref 8/18
     // ** Check User's DB to Get Their Friend Data by passing 'friends'
     //    Then store updated array values in State
   

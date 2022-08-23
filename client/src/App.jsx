@@ -19,6 +19,7 @@ import { GUIProvider } from './utils/GUIProvider';
 import { ChatProvider } from './utils/ChatProvider';
 import { SocketProvider } from './utils/SocketProvider';
 import { useGlobalContext } from './context/GlobalContext';
+import FriendsProvider from './context/FriendsRoomsContext';
 // Import CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
@@ -67,7 +68,9 @@ function App() {
                             <Slider />
                             <Container>
                                 <Switch>
-                                    <Route exact path='/' component={Homepage} />
+                                    <FriendsProvider>
+                                        <Route exact path='/' component={Homepage} />
+                                    </FriendsProvider>
                                     <Route exact path='/profile' component={Profile} />
                                     <Route exact path='/rooms/:id' component={RoomGUI} />
                                     <Route exact path='/rooms/:id/:id' component={SocialSpace} />
