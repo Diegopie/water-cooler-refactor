@@ -1,9 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import Loader from 'react-loader-spinner';
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
-
-
+import {Circles} from 'react-loader-spinner';
 
 function Loading() {
     return (
@@ -11,7 +8,7 @@ function Loading() {
 
             <h2>Tired of Zoom? </h2>
             <h2 className='mb-5' style={{fontFamily: 'Audiowide', color:'orangered'}}>Try WaterCooler</h2>
-            <Loader type="Circles" color="#00BFFF" height={150} width={150} />
+            <Circles type="Circles" color="#00BFFF" height={150} width={150} />
 
         </Container>
     );
